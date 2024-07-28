@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.layout.*?>
+
+<?import org.example.pacman.PacmanView?>
+<BorderPane fx:controller="org.example.pacman.HelloController" style="-fx-background-color: #4d1537;" xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <BorderPane prefHeight="35" style="-fx-background-color: #7e2b5a; -fx-padding: 10px, 5px, 10px, 5px" >
+            <left><Label fx:id="scoreLabel" style="-fx-font-size: 150%; -fx-text-fill: white" /></left>
+            <center><Label fx:id="gameOverLabel" style="-fx-font-size: 200%; -fx-text-fill: #2eff31" /></center>
+            <right><Label fx:id="levelLabel" style="-fx-font-size: 150%; -fx-text-fill: white"/></right>
+        </BorderPane>
+    </top>
+    <center>
+            <PacmanView  fx:id="pacManView" rowCount="20" columnCount="24" />
+    </center>
+
+    <bottom>
+        <HBox prefHeight="35" style="-fx-padding: 10px, 5px, 10px, 5px; -fx-background-color: #701743">
+            <Label style="-fx-font-size: 140%; -fx-text-fill: white"
+                   text="Move with arrow keys  " />
+
+            <Button onAction="#switchToNewMap" prefHeight="149.0" prefWidth="200.0"  text="Start New Game!" style="-fx-cursor: hand; -fx-background-color: #f5c6de">
+            </Button>
+            <Button onAction="#switchToNextMap" prefHeight="149.0" prefWidth="200.0"  text="Go to next map" style="-fx-cursor: hand; -fx-background-color: #ecafcb">
+            </Button>
+            <Button onAction="#switchToPreMap" prefHeight="149.0" prefWidth="200.0"  text="Go to previous map" style="-fx-cursor: hand; -fx-background-color: #dc83b2">
+            </Button>
+        </HBox>
+
+    </bottom>
+</BorderPane>
